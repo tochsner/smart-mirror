@@ -1,0 +1,22 @@
+{
+  "name": "smart-mirror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tochsner/smart-mirror.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tochsner/smart-mirror/issues"
+  },
+  "homepage": "https://github.com/tochsner/smart-mirror#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.7"
+  }
+}
