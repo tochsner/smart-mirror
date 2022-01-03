@@ -43,9 +43,13 @@ async function refreshWeather() {
   currentWindSpeed = toRoundedKmH(response.data.current.wind_speed);
   currentIconPath = toSVGPath(response.data.current.weather[0].icon);
 
-  document.getElementById("temperature").innerHTML = currentTemperature;
-  document.getElementById("wind").innerHTML = currentWindSpeed;
+  document.getElementById("temperature").innerHTML = currentTemperature + '°';
+  document.getElementById("wind").innerHTML = currentWindSpeed + ' km/h';
   document.getElementById("weather-icon").src = currentIconPath;
+
+  rainChance = Math.round(response.data.daily[0].pop * 100);
+  document.getElementById("rain").innerHTML = rainChance + '%';
+  console.log(rainChance);
 
   for (let i = 0; i < NUM_DAYS; i++) {
     today = new Date();
@@ -57,8 +61,8 @@ async function refreshWeather() {
     iconPath = toSVGPath(data.weather[0].icon);
 
     document.getElementById(`weekday-${i}`).innerHTML = weekday;
-    document.getElementById(`min-temp-${i}`).innerHTML = minTemperature;
-    document.getElementById(`max-temp-${i}`).innerHTML = maxTemperature;
+    document.getElementById(`min-temp-${i}`).innerHTML = minTemperature + '°';
+    document.getElementById(`max-temp-${i}`).innerHTML = maxTemperature + '°';
     document.getElementById(`weather-icon-${i}`).src = iconPath;
   }
 }
