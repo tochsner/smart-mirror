@@ -10,10 +10,11 @@
   <link href="src/style.css" rel="stylesheet">
   <script src="src/consts.js"></script>
   <script src="src/weather.js"></script>
+  
 </head>
 <body class="bg-black text-white">
     
-    <div class="grid grid-cols-3 divide-x p-12">
+    <div class="grid grid-cols-3 divide-x p-8">
       <div class="p-4">
         01
       </div>
@@ -22,7 +23,16 @@
       </div>
       <div class="p-4">
         <div class="text-6xl font-bold justify-items-center text-center">Ämtli</div>
+        <div class="grid grid-cols-2 gap-4 pt-24">
+          <div class="text-xl font-bold">Staubsaugen:</div>
+          <div class="text-xl" id="name_staubsaugen"></div>
+          <div class="text-xl font-bold">Badezimmer:</div>
+          <div class="text-xl" id="name_badezimmer"></div>
+          <div class="text-xl font-bold">Chillen:</div>
+          <div class="text-xl" id="name_chillen"></div>
+        </div>
       </div>
     </div>
+    <script src="src/aemtli.js"></script>
 </body>
 </html>
