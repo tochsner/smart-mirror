@@ -14,7 +14,7 @@
 </head>
 <body class="bg-black text-white">
     
-    <div class="grid grid-cols-3 divide-x p-4 h-screen">
+    <div class="grid grid-cols-3 divide-x p-8">
       <div class="p-4">
         <div class="text-6xl font-bold justify-items-center text-center pb-8" id="time"></div>
 
@@ -70,9 +70,18 @@
         <div class="text-6xl font-bold justify-items-center text-center pb-8">Einkauf</div>
       </div>
       <div class="p-4">
-        <div class="text-6xl font-bold justify-items-center text-center pb-8">Ämtli</div>
+        <div class="text-6xl font-bold justify-items-center text-center">Ämtli</div>
+        <div class="grid grid-cols-2 gap-4 pt-24">
+          <div class="text-xl">Staubsaugen:</div>
+          <div class="text-xl font-bold" id="name_staubsaugen"></div>
+          <div class="text-xl">Badezimmer:</div>
+          <div class="text-xl font-bold" id="name_badezimmer"></div>
+          <div class="text-xl">Chillen:</div>
+          <div class="text-xl font-bold" id="name_chillen"></div>
+        </div>
       </div>
     </div>
+    <script src="src/aemtli.js"></script>
     <script src="src/clock.js"></script>
 </body>
 </html>
