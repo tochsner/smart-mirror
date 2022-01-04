@@ -42,6 +42,10 @@ async function getSbbToSh(destination) {
   }
 }
 
-getSbbToSh("schaffhausen");
-getSbbToSh("hb");
-getSbbToSh("eth");
+function refreshConnections() {
+  getSbbToSh("schaffhausen");
+  getSbbToSh("hb");
+  getSbbToSh("eth");
+}
+
+setInterval(refreshConnections, 60 * 1000);
