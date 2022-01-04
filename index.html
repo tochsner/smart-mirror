@@ -15,7 +15,7 @@
 <body class="bg-black text-white">
     
     <div class="grid grid-cols-3 divide-x p-8">
-      <div class="p-4">
+      <div class="p-4 row-span-2">
         <div class="text-6xl font-bold justify-items-center text-center pb-8" id="time"></div>
 
         <div class="grid grid-cols-2 gap-2 items-center pb-8">
@@ -66,11 +66,11 @@
 
       
       </div>
-      <div class="p-4">
-        <div class="text-6xl font-bold justify-items-center text-center pb-8">Einkauf</div>
+      <div class="p-4 pl-8">
+        <div class="text-6xl font-bold justify-items-center text-left pb-8">Einkauf</div>
       </div>
-      <div class="p-4">
-        <div class="text-6xl font-bold justify-items-center text-center">Ämtli</div>
+      <div class="p-4 pl-8">
+        <div class="text-6xl font-bold justify-items-center text-left">Ämtli</div>
         <div class="grid grid-cols-2 gap-4 pt-24">
           <div class="text-xl">Staubsaugen:</div>
           <div class="text-xl font-bold" id="name_staubsaugen"></div>
@@ -80,6 +80,33 @@
           <div class="text-xl font-bold" id="name_chillen"></div>
         </div>
       </div>
+
+
+      <div class="p-4 col-span-2 pl-8">
+        <div class="text-6xl font-bold justify-items-center text-left pb-8">Verbindungen</div>
+
+        <div class="grid grid-cols-12 gap-y-2 ">
+          <div id="eth-dep">21:35</div>
+          <div id="eth-delay" class="bg-red-700 rounded-full h-5 w-5 place-self-center text-center text-xs">+2</div>
+          <div class="col-start-10">ETH</div>
+          <div id="eth-arr" class="col-start-12 text-right">22:44</div>
+          <img src="src/img/trains/trainline.svg" class="col-span-12">
+
+          <div id="hb-dep">21:35</div>
+          <div id="hb-delay" class="bg-red-700 rounded-full h-5 w-5 place-self-center text-center text-xs">+2</div>
+          <div class="col-start-10 col-span-2">Zürich HB</div>
+          <div id="hb-arr" class="col-start-12 text-right">22:44</div>
+          <img src="src/img/trains/trainline.svg" class="col-span-12">
+
+          <div id="schaffhausen-dep">21:35</div>
+          <div id="schaffhausen-delay" class="bg-red-700 rounded-full h-5 w-5 place-self-center text-center text-xs">+2</div>
+          <div class="col-start-10">Schaffhausen</div>
+          <div id="schaffhausen-arr" class="col-start-12 text-right">22:44</div>
+          <img src="src/img/trains/trainline.svg" class="col-span-12">
+        </div>
+
+      </div>
+      
     </div>
     <script src="src/aemtli.js"></script>
     <script src="src/clock.js"></script>
