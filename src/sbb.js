@@ -1,19 +1,10 @@
 function formatTimeString(timeString) {
   // convert datestring to make it compatible with safari
-  alert(timeString);
   timeString = timeString.replace(/-/g, "/");
-  alert("B");
   timeString = timeString.replace(/T/g, " ");
-  alert("C");
   timeString = timeString.substring(0, timeString.length - 5);
 
-  alert("D");
-  alert(timeString);
-
   const date = new Date(Date.parse(timeString));
-
-  alert("E");
-  alert(date);
 
   var formatOptions = { hour: "2-digit", minute: "2-digit" };
   return date.toLocaleString("de-CH", formatOptions);
@@ -29,27 +20,21 @@ function getDelay(planned, predicted) {
   else return `${delay}`;
 }
 
-async function getSbbToSh(destination) {
+async function displayConnection(destination) {
   const url = `https://transport.opendata.ch/v1/connections?from=Dübendorf&to=${destination}`;
   const response = await axios.get(url);
 
-  alert("0");
-
   const nextConnection = response.data.connections[0];
-
-  alert("1");
 
   const plannedDeparture = nextConnection.from.departure;
   const predictedDeparture = nextConnection.from.prognosis.departure;
 
   const plannedArrival = nextConnection.to.arrival;
 
-  alert("2");
   document.getElementById(`${destination}-dep`).innerHTML =
     formatTimeString(plannedDeparture);
   document.getElementById(`${destination}-arr`).innerHTML =
     formatTimeString(plannedArrival);
-  alert("3");
 
   if (plannedDeparture === predictedDeparture || predictedDeparture === null) {
     document.getElementById(`${destination}-delay`).style.display = "none";
@@ -60,13 +45,12 @@ async function getSbbToSh(destination) {
       predictedDeparture
     );
   }
-  alert("4");
 }
 
 function refreshConnections() {
-  getSbbToSh("schaffhausen");
-  getSbbToSh("hb");
-  getSbbToSh("eth");
+  displayConnection("schaffhausen");
+  displayConnection("hb");
+  displayConnection("eth");
 }
 
 refreshConnections();
