@@ -1,10 +1,9 @@
 function formatTimeString(timeString) {
   // convert datestring to make it compatible with safari
-  alert("A");
   alert(timeString);
-  timeString = timeString.replaceAll("-", "/");
+  timeString = timeString.replace(/-/g, "/");
   alert("B");
-  timeString = timeString.replaceAll("T", " ");
+  timeString = timeString.replaceAll(/T/g, " ");
   alert("C");
   timeString = timeString.substring(0, timeString.length - 5);
 
