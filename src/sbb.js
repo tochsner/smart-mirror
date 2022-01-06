@@ -1,15 +1,18 @@
 function formatTimeString(timeString) {
   // convert datestring to make it compatible with safari
+  alert("A");
   timeString = timeString.replaceAll("-", "/");
+  alert("B");
   timeString = timeString.replaceAll("T", " ");
+  alert("C");
   timeString = timeString.substring(0, timeString.length - 5);
 
-  alert("A");
+  alert("D");
   alert(timeString);
 
   const date = new Date(Date.parse(timeString));
 
-  alert("B");
+  alert("E");
   alert(date);
 
   var formatOptions = { hour: "2-digit", minute: "2-digit" };
