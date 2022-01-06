@@ -3,7 +3,7 @@ function formatTimeString(timeString) {
   alert(timeString);
   timeString = timeString.replace(/-/g, "/");
   alert("B");
-  timeString = timeString.replaceAll(/T/g, " ");
+  timeString = timeString.replace(/T/g, " ");
   alert("C");
   timeString = timeString.substring(0, timeString.length - 5);
 
