@@ -1,4 +1,10 @@
 function formatTimeString(timeString) {
+  // convert datestring to make it compatible with safari
+  timeString = timeString.replaceAll("-", "/");
+  timeString = timeString.replaceAll("T", " ");
+  timeString = timeString.substring(0, timeString.length - 5);
+
+  console.log(timeString);
   const date = new Date(Date.parse(timeString));
 
   var formatOptions = { hour: "2-digit", minute: "2-digit" };
@@ -31,7 +37,7 @@ async function getSbbToSh(destination) {
   document.getElementById(`${destination}-arr`).innerHTML =
     formatTimeString(plannedArrival);
 
-  if (plannedDeparture === predictedDeparture) {
+  if (plannedDeparture === predictedDeparture || predictedDeparture === null) {
     document.getElementById(`${destination}-delay`).style.display = "none";
   } else {
     document.getElementById(`${destination}-delay`).style.display = "visible";
