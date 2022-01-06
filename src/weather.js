@@ -1,3 +1,4 @@
+const WEATHER_API_KEY = "9a48ea7d19a72a24440fbb791b7f0a55";
 const LATITUDE = 47.398577;
 const LONGITUDE = 8.599249;
 const NUM_DAYS = 4;

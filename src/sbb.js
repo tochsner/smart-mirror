@@ -4,7 +4,6 @@ function formatTimeString(timeString) {
   timeString = timeString.replaceAll("T", " ");
   timeString = timeString.substring(0, timeString.length - 5);
 
-  console.log(timeString);
   const date = new Date(Date.parse(timeString));
 
   var formatOptions = { hour: "2-digit", minute: "2-digit" };
