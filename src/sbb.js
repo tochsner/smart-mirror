@@ -4,7 +4,13 @@ function formatTimeString(timeString) {
   timeString = timeString.replaceAll("T", " ");
   timeString = timeString.substring(0, timeString.length - 5);
 
+  alert("A");
+  alert(timeString);
+
   const date = new Date(Date.parse(timeString));
+
+  alert("B");
+  alert(date);
 
   var formatOptions = { hour: "2-digit", minute: "2-digit" };
   return date.toLocaleString("de-CH", formatOptions);
@@ -24,17 +30,23 @@ async function getSbbToSh(destination) {
   const url = `https://transport.opendata.ch/v1/connections?from=Dübendorf&to=${destination}`;
   const response = await axios.get(url);
 
+  alert("0");
+
   const nextConnection = response.data.connections[0];
+
+  alert("1");
 
   const plannedDeparture = nextConnection.from.departure;
   const predictedDeparture = nextConnection.from.prognosis.departure;
 
   const plannedArrival = nextConnection.to.arrival;
 
+  alert("2");
   document.getElementById(`${destination}-dep`).innerHTML =
     formatTimeString(plannedDeparture);
   document.getElementById(`${destination}-arr`).innerHTML =
     formatTimeString(plannedArrival);
+  alert("3");
 
   if (plannedDeparture === predictedDeparture || predictedDeparture === null) {
     document.getElementById(`${destination}-delay`).style.display = "none";
@@ -45,6 +57,7 @@ async function getSbbToSh(destination) {
       predictedDeparture
     );
   }
+  alert("4");
 }
 
 function refreshConnections() {
