@@ -15,44 +15,41 @@
 </head>
 <body class="bg-black text-white">
     
-    <div class="grid grid-cols-3  p-8">
+    <div class="grid grid-cols-3  h-screen p-8">
       <div class="p-4">
         <div class="text-6xl font-bold justify-items-center text-center pb-8" id="time"></div>
 
         <div class="grid grid-cols-2 gap-2 items-center pb-8">
           <div><img id="weather-icon"/></div>
           <div class="text-8xl font-bold text-center" id="temperature"></div>
-          <div class="grid grid-cols-2 h-10 justify-items-center">
-          <div class="text-center"><img src="src/img/weather/raindrop.svg" width="29px"></div>
+          <div class="grid grid-cols-2 h-10 pt-2">
+          <div class=""><img src="src/img/weather/raindrop.svg" width="29px"></div>
           <div class="text-xl text-center" id="rain"></div>
         </div>
-        <div class="grid grid-cols-2 h-10 justify-items-center">
+        <div class="grid grid-cols-2 h-10 pt-2 justify-items-center">
           <div class="text-center"><img src="src/img/weather/wind.svg" width="29px"></div>
           <div class="text-xl text-center" id="wind"></div>
         </div>
         </div>
 
-        
-        
-
       
       </div>
-      <div class="p-4 pl-8 border-x-2">
-        <div class="text-6xl font-bold justify-items-center text-left pb-8">Einkauf</div>
+      <div class="p-4 pl-8 border-l-2">
+        <div class="text-6xl font-bold justify-items-center text-left pb-8 ">Einkauf</div>
       </div>
-      <div class="p-4 pl-8">
+      <div class="p-4 pl-8 border-l-2">
         <div class="text-6xl font-bold justify-items-center text-left">Ämtli</div>
         <div class="grid grid-cols-2 gap-4 pt-24">
           <div class="text-xl">Staubsaugen:</div>
           <div class="text-xl font-bold" id="name_staubsaugen"></div>
           <div class="text-xl">Badezimmer:</div>
           <div class="text-xl font-bold" id="name_badezimmer"></div>
-          <div class="text-xl">Chillen:</div>
+          <div class="text-xl">Leben chillen:</div>
           <div class="text-xl font-bold" id="name_chillen"></div>
         </div>
       </div>
 
-      <div class="place-content-stretch">
+      <div class="place-content-evenly grid-cols-1 pl-2 pr-4" style="padding-top: 120px;">
       <div class="grid grid-cols-7 gap-4 text-xl pb-2">
         <div class="col-span-2" id="weekday-0"></div>
         <div class="col-span-2 justify-self-center"><img id="weather-icon-0" width="29px"/></div>
