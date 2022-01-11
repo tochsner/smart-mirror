@@ -23,7 +23,6 @@ function getDelay(planned, predicted) {
 async function displayConnection(destination) {
   const url = `https://transport.opendata.ch/v1/connections?from=Dübendorf&to=${destination}`;
   const response = await axios.get(url);
-
   const nextConnection = response.data.connections[0];
 
   const plannedDeparture = nextConnection.from.departure;
@@ -45,6 +44,7 @@ async function displayConnection(destination) {
       predictedDeparture
     );
   }
+  
 }
 
 function refreshConnections() {
@@ -52,6 +52,5 @@ function refreshConnections() {
   displayConnection("hb");
   displayConnection("eth");
 }
-
 refreshConnections();
-setInterval(refreshConnections, 60 * 1000);
+setInterval(refreshConnections, 5 * 60 * 1000);
