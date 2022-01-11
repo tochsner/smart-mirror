@@ -50,6 +50,10 @@ async function refreshWeather() {
 
   rainChance = Math.round(response.data.daily[0].pop * 100);
   document.getElementById("rain").innerHTML = rainChance + "%";
+  
+    if (rainChance > 20) {
+        document.getElementById("rainMorning").style.display = "block";
+    }
 
   for (let i = 0; i < NUM_DAYS; i++) {
     today = new Date();
