@@ -1,16 +1,16 @@
 var today = new Date();
 var time = today.getHours()
 
-const begruessungen = ['Sunshine', 'Tiger', 'Darling', 'Honey', 'Bratan', 'Cutie'];
-if(time <=9 && time >=5) {
-    let begruessungenSatz = "Good Morning, " + begruessungen[Math.floor(Math.random() * begruessungen.length)] + "!";
-    document.getElementById("begruessung").innerHTML = begruessungenSatz;
+const nightNames = ['Sunshine', 'Tiger', 'Darling', 'Honey', 'Bratan', 'Cutie'];
+if(time >=22) {
+    let nightSatz = "Time to sleep, " + nightNames[Math.floor(Math.random() * nightNames.length)] + "!";
+    document.getElementById("begruessung").innerHTML = nightSatz;
     document.getElementById("verbindungen-titel").style.display = "none";
     document.getElementById("quote").style.display = "block";
     document.getElementById("aemtli").style.display = "none";
     document.getElementById("einkauf").style.display = "none";
     document.getElementById("morningRoutine").style.display = "block";
-    document.getElementById("quotePreambel").innerHTML = "Quote of the day";
+    document.getElementById("quotePreambel").innerHTML = "Quote for the night: ";
     getQuote();
 }
 
