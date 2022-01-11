@@ -34,11 +34,16 @@
 
       
       </div>
-      <div class="p-4 pl-8 border-l-2">
-        <div class="text-6xl font-bold justify-items-center text-left pb-8 ">Einkauf</div>
+      <div class="col-span-2 hidden p-4 pl-8 border-l-2" id="morningRoutine">
+        <div class="text-6xl font-thin justify-items-center text-left pb-8 " id="begruessung"></div>
+        <div class="text-xl font-thin"> <p>Quote of the day:</p><p id="quote"></p></div>
+        <div id="rainMorning" class="pt-8 text-2xl font-bold hidden">Don't forget your umbrella today, there's a chance of rain.</div>
       </div>
-      <div class="p-4 pl-8 border-l-2">
-        <div class="text-6xl font-bold justify-items-center text-left">Ämtli</div>
+      <div class="p-4 pl-8 border-l-2" id="einkauf">
+        <div class="text-6xl font-bold justify-items-center text-left pb-8 " >Einkauf</div>
+      </div>
+      <div class="p-4 pl-8 border-l-2" id="aemtli">
+        <div class="text-6xl font-bold justify-items-center text-left" >Ämtli</div>
         <div class="grid grid-cols-2 gap-4 pt-24">
           <div class="text-xl">Staubsaugen:</div>
           <div class="text-xl font-bold" id="name_staubsaugen"></div>
@@ -85,7 +90,7 @@
 
 
       <div class="p-4 col-span-2 pl-8 border-l-2">
-        <div class="text-6xl font-bold justify-items-center text-left pb-8">Verbindungen</div>
+        <div class="text-6xl font-bold justify-items-center text-left pb-8" id="verbindungen-titel">Verbindungen</div>
 
         <div class="grid grid-cols-12 gap-y-2 ">
           <div id="eth-dep">API Error</div>
@@ -114,5 +119,6 @@
     <script src="src/clock.js"></script>
     <script src="src/sbb.js"></script>
     <script src="src/weather.js"></script>
+    <script src="src/morningRoutine.js"></script>
 </body>
 </html>
