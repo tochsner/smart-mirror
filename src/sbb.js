@@ -11,8 +11,8 @@ function formatTimeString(timeString) {
 }
 
 function getDelay(planned, predicted) {
-  const msPlanned = Date.parse(planned);
-  const msPredicted = Date.parse(predicted);
+  const msPlanned = Number(Date.parse(planned));
+  const msPredicted = Number(Date.parse(predicted));
 
   const delay = Math.round((msPredicted - msPlanned) / 1000 / 60);
 
