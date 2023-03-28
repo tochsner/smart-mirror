@@ -4,7 +4,7 @@ function getAemtli() {
   const daysSinceStart = Math.floor(currentdate / (24 * 60 * 60 * 1000));
   const weeksSinceStart = Math.floor((daysSinceStart - 4) / 7);
 
-  const currentMode = weeksSinceStart % 3;
+  const currentMode = (weeksSinceStart - 1) % 3;
 
   if (currentMode === 0) {
     document.getElementById("name_staubsaugen").innerHTML = "Jonathan";
