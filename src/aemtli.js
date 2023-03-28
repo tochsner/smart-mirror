@@ -1,10 +1,10 @@
 function getAemtli() {
-  currentdate = new Date();
-  let oneJan = new Date(currentdate.getFullYear(), 0, 1);
-  let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-  let result = Math.ceil((currentdate.getDay() + numberOfDays - 4) / 7);
+  const currentdate = new Date();
 
-  let currentMode = result % 3;
+  const daysSinceStart = Math.floor(currentdate / (24 * 60 * 60 * 1000));
+  const weeksSinceStart = Math.floor((daysSinceStart - 4) / 7);
+
+  const currentMode = weeksSinceStart % 3;
 
   if (currentMode === 0) {
     document.getElementById("name_staubsaugen").innerHTML = "Jonathan";
