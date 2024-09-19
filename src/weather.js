@@ -1,4 +1,4 @@
-const WEATHER_API_KEY = "9a48ea7d19a72a24440fbb791b7f0a55";
+const WEATHER_API_KEY = "ebfad9afa23c4842420244d9d1f83313";
 const LATITUDE = 47.398577;
 const LONGITUDE = 8.599249;
 const NUM_DAYS = 4;
@@ -37,7 +37,7 @@ function toSVGPath(iconID) {
 
 async function refreshWeather() {
   const response = await axios.get(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${WEATHER_API_KEY}`
+    `https://api.openweathermap.org/data/3.0/onecall?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${WEATHER_API_KEY}`
   );
 
   currentTemperature = toRoundedDegrees(response.data.current.feels_like);

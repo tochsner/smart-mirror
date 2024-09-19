@@ -8,12 +8,12 @@ function getAemtli() {
 
   if (currentMode === 0) {
     document.getElementById("name_staubsaugen").innerHTML = "Jonathan";
-    document.getElementById("name_badezimmer").innerHTML = "Tobia";
+    document.getElementById("name_badezimmer").innerHTML = "Annik";
     document.getElementById("name_chillen").innerHTML = "Tobias";
   }
 
   if (currentMode === 1) {
-    document.getElementById("name_staubsaugen").innerHTML = "Tobia";
+    document.getElementById("name_staubsaugen").innerHTML = "Annik";
     document.getElementById("name_badezimmer").innerHTML = "Tobias";
     document.getElementById("name_chillen").innerHTML = "Jonathan";
   }
@@ -21,7 +21,7 @@ function getAemtli() {
   if (currentMode === 2) {
     document.getElementById("name_staubsaugen").innerHTML = "Tobias";
     document.getElementById("name_badezimmer").innerHTML = "Jonathan";
-    document.getElementById("name_chillen").innerHTML = "Tobia";
+    document.getElementById("name_chillen").innerHTML = "Annik";
   }
 }
 
