@@ -9,17 +9,17 @@ function getAemtli() {
   if (currentMode === 0) {
     document.getElementById("name_staubsaugen").innerHTML = "Jonathan";
     document.getElementById("name_badezimmer").innerHTML = "Annik";
-    document.getElementById("name_chillen").innerHTML = "Tobias";
+    document.getElementById("name_chillen").innerHTML = "Nadina";
   }
 
   if (currentMode === 1) {
     document.getElementById("name_staubsaugen").innerHTML = "Annik";
-    document.getElementById("name_badezimmer").innerHTML = "Tobias";
+    document.getElementById("name_badezimmer").innerHTML = "Nadina";
     document.getElementById("name_chillen").innerHTML = "Jonathan";
   }
 
   if (currentMode === 2) {
-    document.getElementById("name_staubsaugen").innerHTML = "Tobias";
+    document.getElementById("name_staubsaugen").innerHTML = "Nadina";
     document.getElementById("name_badezimmer").innerHTML = "Jonathan";
     document.getElementById("name_chillen").innerHTML = "Annik";
   }
