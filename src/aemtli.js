@@ -7,7 +7,7 @@ function getAemtli() {
   const currentMode = (weeksSinceStart - 1) % 3;
 
   if (currentMode === 0) {
-    document.getElementById("name_staubsaugen").innerHTML = "Jonathan";
+    document.getElementById("name_staubsaugen").innerHTML = "Tobias";
     document.getElementById("name_badezimmer").innerHTML = "Annik";
     document.getElementById("name_chillen").innerHTML = "Nadina";
   }
