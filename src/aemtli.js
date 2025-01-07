@@ -7,20 +7,20 @@ function getAemtli() {
   const currentMode = (weeksSinceStart - 1) % 3;
 
   if (currentMode === 0) {
-    document.getElementById("name_staubsaugen").innerHTML = "Tobias";
+    document.getElementById("name_staubsaugen").innerHTML = "Jonathan/Nadina";
     document.getElementById("name_badezimmer").innerHTML = "Annik";
-    document.getElementById("name_chillen").innerHTML = "Nadina";
+    document.getElementById("name_chillen").innerHTML = "Tobias";
   }
 
   if (currentMode === 1) {
     document.getElementById("name_staubsaugen").innerHTML = "Annik";
-    document.getElementById("name_badezimmer").innerHTML = "Nadina";
-    document.getElementById("name_chillen").innerHTML = "Jonathan";
+    document.getElementById("name_badezimmer").innerHTML = "Tobias";
+    document.getElementById("name_chillen").innerHTML = "Jonathan/Nadina";
   }
 
   if (currentMode === 2) {
-    document.getElementById("name_staubsaugen").innerHTML = "Nadina";
-    document.getElementById("name_badezimmer").innerHTML = "Jonathan";
+    document.getElementById("name_staubsaugen").innerHTML = "Tobias";
+    document.getElementById("name_badezimmer").innerHTML = "Jonathan/Nadina";
     document.getElementById("name_chillen").innerHTML = "Annik";
   }
 }
